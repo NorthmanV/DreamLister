@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		87133E401FAE608F002E49A8 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87133E3F1FAE608F002E49A8 /* CustomTextField.swift */; };
 		87E873DF1FA5E3A30078D3B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E873DE1FA5E3A30078D3B6 /* AppDelegate.swift */; };
 		87E873E11FA5E3A30078D3B6 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E873E01FA5E3A30078D3B6 /* MainVC.swift */; };
 		87E873E41FA5E3A30078D3B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87E873E21FA5E3A30078D3B6 /* Main.storyboard */; };
@@ -23,9 +24,11 @@
 		87E874141FA66E380078D3B6 /* Item+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E8740C1FA66E380078D3B6 /* Item+CoreDataProperties.swift */; };
 		87EC03C71FABAA5F00FB01B6 /* MaterialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EC03C61FABAA5F00FB01B6 /* MaterialView.swift */; };
 		87EC03C91FADE17D00FB01B6 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EC03C81FADE17D00FB01B6 /* ItemCell.swift */; };
+		87EC03CC1FAE367900FB01B6 /* ItemDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EC03CB1FAE367900FB01B6 /* ItemDetailsVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		87133E3F1FAE608F002E49A8 /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		87E873DB1FA5E3A30078D3B6 /* DreamLister.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DreamLister.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		87E873DE1FA5E3A30078D3B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		87E873E01FA5E3A30078D3B6 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
@@ -44,6 +47,7 @@
 		87E8740C1FA66E380078D3B6 /* Item+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Item+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		87EC03C61FABAA5F00FB01B6 /* MaterialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialView.swift; sourceTree = "<group>"; };
 		87EC03C81FADE17D00FB01B6 /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
+		87EC03CB1FAE367900FB01B6 /* ItemDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailsVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,8 +82,8 @@
 			children = (
 				87EC03C51FABAA3A00FB01B6 /* Veiw */,
 				87E874031FA66CA10078D3B6 /* Model */,
+				87EC03CA1FAE360300FB01B6 /* Controller */,
 				87E873DE1FA5E3A30078D3B6 /* AppDelegate.swift */,
-				87E873E01FA5E3A30078D3B6 /* MainVC.swift */,
 				87E873E21FA5E3A30078D3B6 /* Main.storyboard */,
 				87E873E81FA5E3A30078D3B6 /* Assets.xcassets */,
 				87E873EA1FA5E3A30078D3B6 /* LaunchScreen.storyboard */,
@@ -117,8 +121,18 @@
 			children = (
 				87EC03C61FABAA5F00FB01B6 /* MaterialView.swift */,
 				87EC03C81FADE17D00FB01B6 /* ItemCell.swift */,
+				87133E3F1FAE608F002E49A8 /* CustomTextField.swift */,
 			);
 			path = Veiw;
+			sourceTree = "<group>";
+		};
+		87EC03CA1FAE360300FB01B6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				87E873E01FA5E3A30078D3B6 /* MainVC.swift */,
+				87EC03CB1FAE367900FB01B6 /* ItemDetailsVC.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,11 +215,13 @@
 				87E873E11FA5E3A30078D3B6 /* MainVC.swift in Sources */,
 				87E8740F1FA66E380078D3B6 /* Image+CoreDataClass.swift in Sources */,
 				87E874121FA66E380078D3B6 /* Store+CoreDataProperties.swift in Sources */,
+				87EC03CC1FAE367900FB01B6 /* ItemDetailsVC.swift in Sources */,
 				87E873DF1FA5E3A30078D3B6 /* AppDelegate.swift in Sources */,
 				87E874111FA66E380078D3B6 /* Store+CoreDataClass.swift in Sources */,
 				87E873E71FA5E3A30078D3B6 /* DreamLister.xcdatamodeld in Sources */,
 				87E874141FA66E380078D3B6 /* Item+CoreDataProperties.swift in Sources */,
 				87E874101FA66E380078D3B6 /* Image+CoreDataProperties.swift in Sources */,
+				87133E401FAE608F002E49A8 /* CustomTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
