@@ -34,12 +34,16 @@ class ItemDetailsVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSou
         detailsField.delegate = self
         imagePicker = UIImagePickerController()
         imagePicker.delegate = self
-        //generateStores()
+        
+        let launchedBefore = UserDefaults.standard.bool(forKey: "launchedBefore") // false is default
+        if !launchedBefore {
+            generateStores()
+            UserDefaults.standard.set(true, forKey: "launchedBefore")
+        }
         getStores()
         if itemToEdit != nil {
             loadItemData()
         }
-        stores.swapAt(0, 5)
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
@@ -61,6 +65,8 @@ class ItemDetailsVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSou
     
     func getStores() {
         let fetchRequest: NSFetchRequest<Store> = Store.fetchRequest()
+        let nameSort = NSSortDescriptor(key: "name", ascending: true)
+        fetchRequest.sortDescriptors = [nameSort]
         do {
             self.stores = try context.fetch(fetchRequest)
             self.storePicker.reloadAllComponents()
